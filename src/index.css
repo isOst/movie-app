@@ -5,9 +5,114 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #ebebeb;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+a {
+  text-decoration: none;
+}
+
+.movie-card-img {
+  width: 100%;
+  height: 20vmin;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+}
+
+.movie-card-title {
+  font-size: 2.5vmin;
+  text-align: center;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.movie-card-rate {
+  font-size: 2vmin;
+}
+
+.movie-card-description {
+  max-height: 13vmin;
+  font-size: 1.8vmin;
+  overflow: hidden;
+}
+
+.movie-bar-img {
+  display: inline-block;
+  width: 15vmin;
+  height: 18vmin;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+}
+
+.movie-bar-title {
+  font-size: 2.5vmin;
+  font-weight: bold;
+}
+
+.movie-bar-rate {
+  display: inline-block;
+  font-size: 2vmin;
+  width: 11vmin;
+  text-align: center;
+}
+
+.movie-bar-container {
+  max-height: 13vmin;
+  width: 80%;
+}
+
+.movie-bar-description {
+  max-height: 13vmin;
+  font-size: 1.8vmin;
+  overflow: hidden;
+}
+
+.movie-page-container {
+  background-color: white;
+  height: 100%;
+  margin: 2vmin;
+}
+
+.movie-page-section {
+  background-color: white;
+  display: inline-block;
+  float: right;
+  width: 65%;
+  height: 100%;
+  margin: 0 2vmin;
+  padding: 1vmin;
+}
+
+.movie-page-img {
+  display: inline-block;
+  width: 30%;
+  height: 50vmin;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0;
+}
+
+.movie-page-name {
+  font-size: 3.5vmin;
+  margin: 1vmin auto;
+  font-weight: bold;
+}
+
+.movie-page-rate {
+  font-size: 3vmin;
+}
+
+.movie-page-description {
+  font-size: 2.7vmin;
+  margin: 1vmin auto;
 }
