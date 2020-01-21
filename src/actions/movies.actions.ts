@@ -1,7 +1,7 @@
 import {IActionInitial, IActionOnError, IActionWithData} from "./action.interface";
 import {Dispatch} from "redux";
 import {TMovie} from "../store/movie.store";
-import {setMoviesPages} from "./movies-pages.action";
+import {changeMoviesPages, setMoviesPages} from "./movies-pages.action";
 import {IMovie} from "../store/movies.store";
 /**
  * Actions names definitions
@@ -46,7 +46,7 @@ const fetchMoviesFailure = (error: Error): IActionOnError => ({
  * @param input
  */
 const filterMoviesByInput = (movies: Array<TMovie>, input?: string): Array<TMovie> => {
-    if (!input || input.length < 3) return movies;
+    if (!input || input.length <= 3) return movies;
     const regExp = new RegExp(input, "gi");
     return movies.filter((movie: TMovie) => movie.name.match(regExp)) || [];
 };
@@ -80,7 +80,10 @@ export const fetchMovies = (input: string = "", page: number, perPage: number) =
                 // in real world there should be calls to API
                 const filteredByInput = filterMoviesByInput(data, input);
                 const pagesNumber = Math.ceil(filteredByInput.length / perPage);
-                if (input.length > 3 || page === 0) dispatch(setMoviesPages(pagesNumber));
+                if (input.length >= 3 || page === 0) {
+                    dispatch(setMoviesPages(pagesNumber));
+                    dispatch(changeMoviesPages(0))
+                }
                 const filteredByPage = filterMoviesByPage(filteredByInput, page, perPage);
                 dispatch(fetchMoviesSuccess(filteredByPage));
             }

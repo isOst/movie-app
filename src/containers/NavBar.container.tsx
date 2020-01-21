@@ -21,7 +21,7 @@ export const NavBarContainer: React.FC = () => {
     const fetchOnInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         dispatch(changeSearchString(e.target.value));
         // @ts-ignore
-        dispatch(fetchMovies(pages.searchInput, pages.page, pages.perPage))
+        dispatch(fetchMovies(e.target.value, pages.page, pages.perPage))
     };
 
     return (
