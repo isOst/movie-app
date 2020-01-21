@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled, {StyledFunction} from "styled-components";
 import {theme} from "./theme"
+import React, {forwardRef} from "react";
 
 export const Input = styled.input`
     display: flex;

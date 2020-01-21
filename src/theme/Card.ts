@@ -7,6 +7,6 @@ export const Card = styled.div`
     margin: 1vmin 2vmin;
     width: 28vmin;
     height: 40vmin;
-    background-color: white;
+    background-color: ${theme.colors.primary};
     overflow: hidden;
 `;

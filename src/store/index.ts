@@ -1,8 +1,9 @@
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk"
 import rootReducer from "../reducers";
-import {IMoviesState} from "../reducers/movies.reducer";
+import {IMoviesState} from "../store/movies.store";
 import {TMovieState} from "./movie.store";
+import {TMoviesPagesState} from "./movies-pages.store";
 
 /**
  * App State type definition
@@ -10,7 +11,8 @@ import {TMovieState} from "./movie.store";
 export type TState = {
     movies: IMoviesState,
     movie: TMovieState,
-    moviesView: string // defined in MoviesViewStore as a name of view kind
+    moviesView: string, // defined in MoviesViewStore as a name of view kind
+    moviesPages: TMoviesPagesState
 }
 
 /**

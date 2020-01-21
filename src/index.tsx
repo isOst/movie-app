@@ -6,9 +6,14 @@ import * as serviceWorker from './serviceWorker';
 import {Provider} from "react-redux";
 import {Store} from "./store";
 import {fetchMovies} from "./actions/movies.actions";
+import {MoviesPagesStateInitial} from "./store/movies-pages.store";
 
 // @ts-ignore
-Store.dispatch(fetchMovies());
+Store.dispatch(fetchMovies(
+    MoviesPagesStateInitial.searchInput,
+    MoviesPagesStateInitial.page,
+    MoviesPagesStateInitial.perPage
+));
 ReactDOM.render(
     <Provider store={Store}>
         <App />

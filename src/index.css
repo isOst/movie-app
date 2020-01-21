@@ -116,3 +116,9 @@ a {
   font-size: 2.7vmin;
   margin: 1vmin auto;
 }
+
+.nav-pages-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
