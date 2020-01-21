@@ -1,5 +1,3 @@
-import {IActionWithData} from "../actions/action.interface";
-
 export interface IMovie {
     id: number,
     key: string,

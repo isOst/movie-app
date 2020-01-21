@@ -3,7 +3,7 @@ import {ViewModule} from "styled-icons/material/ViewModule";
 import {ViewList} from "styled-icons/material/ViewList";
 import {Input} from "../theme/Input";
 import {Row} from "../theme/Row";
-import React, {forwardRef} from "react";
+import React from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {Dispatch} from "redux";
 import {changeMoviesView} from "../actions/movies-view.action";

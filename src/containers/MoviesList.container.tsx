@@ -1,9 +1,7 @@
-import {Bar} from "../theme/Bar";
 import React from "react";
 import {Dispatch} from "redux";
 import {useDispatch, useSelector} from "react-redux";
 import {TState} from "../store";
-import {Card} from "../theme/Card";
 import {MoviesContainer} from "../theme/MoviesContainer";
 import {MOVIES_VIEW_GRID, MOVIES_VIEW_LIST} from "../store/movies-view.store";
 import {MovieCardComponent} from "../components/MovieCard.component";
